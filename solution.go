@@ -20,11 +20,11 @@ const (
 func CalcSquare(sideLen float64, sidesNum countable) float64 {
 	switch sidesNum {
 	case SidesTriangle:
-		return float64((math.Sqrt(3) * math.Pow(2, sideLen)) / 4)
+		return float64((math.Sqrt(3) * math.Pow(sideLen, 2)) / 4)
 	case SidesSquare:
-		return float64(math.Pow(2, sideLen))
+		return float64(math.Pow(sideLen, 2))
 	case SidesCircle:
-		return float64(math.Pi * math.Pow(2, sideLen))
+		return float64(math.Pi * math.Pow(sideLen, 2))
 	default:
 		return float64(0)
 	}
